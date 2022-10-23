@@ -18,7 +18,7 @@ void AddFigureConsoleInput(std::vector<std::shared_ptr<Figure>>& figureCase)
 			radiusValue = CheckDoubleValue();
 
 			figureCase.emplace_back(std::make_shared<Circle>(radiusValue));
-			break;
+			return;
 		case FiguresTypes::Rectangle:
 			std::cout << "Enter width." << std::endl;
 			widthValue = CheckDoubleValue();
@@ -28,7 +28,7 @@ void AddFigureConsoleInput(std::vector<std::shared_ptr<Figure>>& figureCase)
 
 			figureCase.emplace_back(std::make_shared<Rectangle>(widthValue, heightValue));
 
-			break;
+			return;
 		case FiguresTypes::Trapezoid:
 			std::cout << "Enter smaller base" << std::endl;
 			double smallerBaseValue = CheckDoubleValue();
